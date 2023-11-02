@@ -1,0 +1,11 @@
+# Ignore photo files
+*.pdf
+*.png
+*.jpg
+
+# Ignore Static Directory
+Static/*
+
+# Ignore pycache
+*.__pycache__
+
