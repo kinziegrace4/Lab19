@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist Results</title>
+    <style>
+        /* Define CSS rules to style your elements */
+        h2 {
+            font-family: Arial, sans-serif; /* Change the font family */
+            font-size: 24px; /* Change the font size */
+            color: #0077B6; /* Change the text color */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        form {
+            font-family: 'Times New Roman', serif; /* Change the font family for the form */
+            font-size: 16px; /* Change the font size for the form */
+            color: lightseagreen; /* Change the text color for the form */
+        }
+    </style>
+
+    <div class="navigation-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
+
+</head>
+<body>
+<div class="container mb-4">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Current Playlist</h2>
+            <ul class="list-group">
+                {% for item in playlist %}
+                    <li class="list-group-item">{{ item.song }} by {{item.artist}}</li>
+
+                {% endfor %}
+            </ul>
+        </div>
+      </div>
+</div>
+
+
+</body>
+</html>

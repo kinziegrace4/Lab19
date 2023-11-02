@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Playlist Form</title>
+    <style>
+        /* Define CSS rules to style your elements */
+        body {
+            background-color: lavender;
+        }
+        h1 {
+            font-family: Arial, sans-serif; /* Change the font family */
+            font-size: 24px; /* Change the font size */
+            color: #0077B6; /* Change the text color */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        form {
+            font-family: 'Times New Roman', serif; /* Change the font family for the form */
+            font-size: 16px; /* Change the font size for the form */
+            color: #333; /* Change the text color for the form */
+        }
+    </style>
+
+    <div class="navigation-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
+</head>
+<body>
+<img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?auto=format&fit=crop&q=60&w=1400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNTMxNTY2fHxlbnwwfHx8fHw%3D" alt="No Music No Life" style="width: 400px; height: auto;">
+    <h1>Welcome to my Playlist Form</h1>
+    <form method="POST" action="/playlist">
+      {{ form.csrf_token }}
+      {{ form.song_title.label }}
+      {{ form.song_title(size=32) }}
+      {{form.artist.label}}
+      {{form.artist(size=32)}}
+      <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
