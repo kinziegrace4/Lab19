@@ -9,28 +9,41 @@
             background-color: lavender;
         }
         h1 {
-            font-family: Arial, sans-serif; /* Change the font family */
+            font-family: "Times New Roman", sans-serif; /* Change the font family */
             font-size: 24px; /* Change the font size */
-            color: #0077B6; /* Change the text color */
+            color: palevioletred; /* Change the text color */
             font-weight: bold; /* Make the text bold */
         }
 
         form {
             font-family: 'Times New Roman', serif; /* Change the font family for the form */
             font-size: 16px; /* Change the font size for the form */
-            color: #333; /* Change the text color for the form */
+            color: black; /* Change the text color for the form */
+        }
+        .home-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Style the home button on hover */
+        .home-button:hover {
+            background-color: green;
         }
     </style>
 
-    <div class="navigation-menu">
-        <ul>
-            <li><a href="/">Home</a></li>
-        </ul>
-    </div>
+<a class="home-button" href="/">Home</a>
+
 </head>
 <body>
+<h1>Welcome to my Playlist Form</h1>
 <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?auto=format&fit=crop&q=60&w=1400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNTMxNTY2fHxlbnwwfHx8fHw%3D" alt="No Music No Life" style="width: 400px; height: auto;">
-    <h1>Welcome to my Playlist Form</h1>
+
     <form method="POST" action="/playlist">
       {{ form.csrf_token }}
       {{ form.song_title.label }}

@@ -5,10 +5,13 @@
     <title>Playlist Results</title>
     <style>
         /* Define CSS rules to style your elements */
+        body {
+            background-color: lavender;
+        }
         h2 {
-            font-family: Arial, sans-serif; /* Change the font family */
+            font-family: "Times New Roman", sans-serif; /* Change the font family */
             font-size: 24px; /* Change the font size */
-            color: #0077B6; /* Change the text color */
+            color: palevioletred; /* Change the text color */
             font-weight: bold; /* Make the text bold */
         }
 
@@ -17,14 +20,40 @@
             font-size: 16px; /* Change the font size for the form */
             color: lightseagreen; /* Change the text color for the form */
         }
+        .home-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Style the home button on hover */
+        .home-button:hover {
+            background-color: green;
+        }
+        .playlist-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Style the home button on hover */
+        .playlist-button:hover {
+            background-color: green;
+        }
     </style>
 
-    <div class="navigation-menu">
-        <ul>
-            <li><a href="/">Home</a></li>
-        </ul>
-    </div>
-
+<a class="home-button" href="/">Home</a>
+<a class="playlist-button" href="/playlist">Add to Playlist</a>
 </head>
 <body>
 <div class="container mb-4">

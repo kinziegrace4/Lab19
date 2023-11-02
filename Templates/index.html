@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
+    <title>Playlist Home</title>
     <style>
-        h1 {
-            color: cornflowerblue;
-            font-size: 32px;
-            font-family: "Courier New";
-        }
         body {
             background-color: lavender;
         }
-        .thumbnail-image{
-            max-width: 100%;
-            height: auto;
+        h1 {
+            font-family: "Times New Roman", sans-serif;
+            font-size: 24px;
+            color: palevioletred;
+            font-weight: bold;
         }
+
         .carousel-container {
             display: flex;
             flex-direction: column;
@@ -58,30 +57,52 @@
 
         input[type="radio"]:checked + .carousel-navigation label {
             background-color: pink;
-}
-    </style>
 
-    <title>My Blog</title>
+        .home-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background-color: green;
+        }
+        .playlist-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .playlist-button:hover {
+            background-color: green;
+        }}
+    </style>
 </head>
 <body>
-
-<div class="navigation-menu">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="playlist">Page 1</a></li>
-            <li><a href="view_playlist">Page 2</a></li>
-        </ul>
-    </div>
-    <h1>Welcome, want to create a playlist?</h1>
+<a class="home-button" href="/">Home</a>
+<a class="playlist-button" href="/playlist">Add to Playlist</a>
+<a class="view-button" href="/view_playlist">View Playlist</a>
+<body>
+</div>
+    <h1>Let's create a playlist!</h1>
 
     <div class="carousel-container">
         <input type="radio" id="slide1" name="slides" checked>
         <div class="carousel-slide">
-            <img src="https://lh3.googleusercontent.com/pw/ADCreHfA3si5qmlrePU1Ji-n5N_8hMIOwy2zstn-iZ-ESTm6nIoEECcIDNoBibQTx_jPXye_fKhM4pfc2BVBga5Ej0whk3IblkpAVe2Q-TjXEGIbHayFhJPcaHsV5tac3ixaBr6FNYIKOFQmRFVpYKbyVa_QvR4YomWyJ6Htb1s9NtCZ0FhLfPbXbFJjc5GYA7bwKWPxBCHjQaP2868lM-T9pxozVHusKX8a_OZEDY-m1J2TYVh75tlO_lp69FWS4h_IyR6FDXdYj19QxzakDKaka7d4RfwhyGDLghkAGPPXRAq0SwMIDDq5Y3pf4rSLqtAJ6UdRB9MNeEGAe40n-i6zFlhKoRtA1bjhlYfTXYKmUkZRfYtBCv0T__fYBG_2P1sNJRyIEfKL1vbJ5x-b8j7adBi7GsZB0dKZjw6Jd7ZkU1l63O-3Qy_gZrGC0A5CVyN5cidmUGa_ZHj9iIBR4Z_8W4cUkUrG8RWMLE7NOtWdbFmXttcmiN3RmQdRTD_5tsxcxm7feystxsF51oHsEJBiG8HB0XO1I1EHLMP_zzY09nmbwssUp_-5mgtwSwfaslL1EIlFy-5VluOM9b9ZB7wuZC6nqXrpaMiUXgCh2CIRnMQJo2BZ2rbyT0tTx822J2ussB44R3-yCViwH8_F1sjWNTL6b6TzateRqImqNc_WbJwU-PHjwSz1gIRB31hgMmBB8zB3iB4pax_UUcMbCS9MmD9Pe2MTGUercyy2WSM3jX_F9UNIZnNz1GvLdNLFLAYRrMII8WAOXFCLgZEs-SkfgM1CO42boghMR8FWxTwn3T_G47D__x31JBXJZsTeBP2CV5HOB447UHFsaYa3pRMpLvNWYyBWKdG_3J1jV_s5TZ1VoJcn98SYgNdGaNijlzYBZcQlukGnrsI_Z7VlOcqNYKDbAQ=w1428-h1072-s-no-gm?authuser=0" alt="Image 1">
+            <img src="https://img.freepik.com/premium-photo/colorful-music-with-notes-creative-digital-illustration-abstract-colors_743855-10782.jpg?size=626&ext=jpg" alt="Image 1">
         </div>
         <input type="radio" id="slide2" name="slides">
         <div class="carousel-slide">
-            <img src="https://lh3.googleusercontent.com/pw/ADCreHcLTVtjhgm0P8ty-e_3fBzT8rMWdO_Rv2O9P8QhSYMwaZyejMrQV8HwCWFHaWYdBOJylyLJ-yJGUhpt1ztrel-IeosyRhEljH8xzXkUQA4fqIZtudwuGto1S0WmgD9FnRFh5lbQC5HvMs_RiLP3foVe=w1038-h1384-s-no-gm?authuser=0" alt="Image 2">
+            <img src="https://img.freepik.com/premium-photo/treble-clef-notes-with-bokeh-effect-by-generative-ai_919160-1227.jpg?w=1380" alt="Image 2">
         </div>
         <div class="carousel-navigation">
             <label for="slide1"></label>
