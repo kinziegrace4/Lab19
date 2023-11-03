@@ -1,18 +1,34 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, request, render_template, redirect
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-from wtforms.validators import  DataRequired
-from datetime import datetime
+from wtforms.validators import DataRequired
+import requests
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'
 bootstrap = Bootstrap(app)
 
+LASTFM_API_KEY = 'a3c735dfd7ec562a596c8a61b6d60254'
+USER_AGENT = 'Dataquest'
+endpoint = 'http://ws.audioscrobbler.com/2.0/'
+
+headers = {
+    'user-agent': USER_AGENT
+}
+
+payload = {
+    'api_key': LASTFM_API_KEY,
+    'method': 'chart.gettopartists',
+    'format': 'json'
+}
+
+# Note: The code below should be placed within a specific route function to execute it in response to a request.
 
 playlist = []
+
 def store_song(my_song, my_artist):
-	playlist.append(dict(
+    playlist.append(dict(
         song=my_song,
         artist=my_artist
     ))
@@ -31,7 +47,7 @@ class Playlist(FlaskForm):
 def home():
     return render_template('index.html')
 
-@app.route('/playlist', methods=('GET', 'POST'))
+@app.route('/playlist', methods=['GET', 'POST'])
 def pl():
     form = Playlist()
     if form.validate_on_submit():
@@ -43,3 +59,25 @@ def pl():
 def vp():
     return render_template('vp.html', playlist=playlist)
 
+@app.route('/api', methods=['GET', 'POST'])
+def search():
+    if request.method == 'POST':
+        search_query = request.form.get('search_query')
+
+        # Make a request to the Last.fm API to search for tracks
+        lastfm_url = 'http://ws.audioscrobbler.com/2.0/'
+        params = {
+            'method': 'track.search',
+            'track': search_query,
+            'api_key': LASTFM_API_KEY,
+            'format': 'json'
+        }
+        response = requests.get(lastfm_url, params=params)
+        data = response.json()
+
+        # Extract song details and pass them to the template for display
+        song_results = data.get('results', {}).get('trackmatches', {}).get('track', [])
+
+        return render_template('api.html', song_results=song_results)
+
+    return render_template('search.html')

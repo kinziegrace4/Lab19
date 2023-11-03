@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
@@ -58,60 +57,60 @@
         input[type="radio"]:checked + .carousel-navigation label {
             background-color: pink;
 
-        .home-button {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: palevioletred;
-            color: white;
-            text-decoration: none;
-            border: 2px solid palevioletred;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+            .home-button {
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: palevioletred;
+                color: white;
+                text-decoration: none;
+                border: 2px solid palevioletred;
+                border-radius: 5px;
+                font-weight: bold;
+            }
 
-        .home-button:hover {
-            background-color: green;
-        }
-        .playlist-button {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: palevioletred;
-            color: white;
-            text-decoration: none;
-            border: 2px solid palevioletred;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .playlist-button:hover {
-            background-color: green;
-        }}
+            .home-button:hover {
+                background-color: green;
+            }
+            .button {
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: palevioletred;
+                color: white;
+                text-decoration: none;
+                border: 2px solid palevioletred;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .button:hover {
+                background-color: green;
+            }}
     </style>
 </head>
 <body>
 <a class="home-button" href="/">Home</a>
-<a class="playlist-button" href="/playlist">Add to Playlist</a>
-<a class="view-button" href="/view_playlist">View Playlist</a>
+<a class="button" href="/playlist">Add to Playlist</a>
+<a class="button" href="/view_playlist">View Playlist</a>
+<a class="button" href="/api">API</a>
 <body>
 </div>
-    <h1>Let's create a playlist!</h1>
+<h1>Let's create a playlist!</h1>
 
-    <div class="carousel-container">
-        <input type="radio" id="slide1" name="slides" checked>
-        <div class="carousel-slide">
-            <img src="https://img.freepik.com/premium-photo/colorful-music-with-notes-creative-digital-illustration-abstract-colors_743855-10782.jpg?size=626&ext=jpg" alt="Image 1">
-        </div>
-        <input type="radio" id="slide2" name="slides">
-        <div class="carousel-slide">
-            <img src="https://img.freepik.com/premium-photo/treble-clef-notes-with-bokeh-effect-by-generative-ai_919160-1227.jpg?w=1380" alt="Image 2">
-        </div>
-        <div class="carousel-navigation">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-
-        </div>
+<div class="carousel-container">
+    <input type="radio" id="slide1" name="slides" checked>
+    <div class="carousel-slide">
+        <img src="https://img.freepik.com/premium-photo/colorful-music-with-notes-creative-digital-illustration-abstract-colors_743855-10782.jpg?size=626&ext=jpg" alt="Image 1">
     </div>
+    <input type="radio" id="slide2" name="slides">
+    <div class="carousel-slide">
+        <img src="https://img.freepik.com/premium-photo/treble-clef-notes-with-bokeh-effect-by-generative-ai_919160-1227.jpg?w=1380" alt="Image 2">
+    </div>
+    <div class="carousel-navigation">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+
+    </div>
+</div>
 </body>
-</html>
 
 
 </body>

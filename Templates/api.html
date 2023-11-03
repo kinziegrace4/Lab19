@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <!DOCTYPE html>
+    <title>Song Search Results</title>
+</head>
+   <style>
+        body {
+            background-color: lavender;
+        }
+        h1 {
+            font-family: "Times New Roman", sans-serif;
+            font-size: 24px;
+            color: palevioletred;
+            font-weight: bold;
+        }
+        .home-button {
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: palevioletred;
+                color: white;
+                text-decoration: none;
+                border: 2px solid palevioletred;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+        .home-button:hover {
+            background-color: green;
+            }
+    </style>
+<head>
+<body>
+<a class="home-button" href="/">Home</a>
+</body>
+
+<body>
+
+    <h1>Song Search Results</h1>
+    <ul>
+        {% for song in song_results %}
+            <li>{{ song.name }} by {{ song.artist }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
