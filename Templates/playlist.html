@@ -30,27 +30,63 @@
             font-weight: bold;
         }
 
-        /* Style the home button on hover */
         .home-button:hover {
             background-color: green;
+        }
+        .home-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background-color: green;
+        }
+        .view-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: palevioletred;
+            color: white;
+            text-decoration: none;
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .view-button:hover {
+            background-color: green;
+        }
+        .song-title {
+            font-weight: bold;
+            margin-right: 10px;
+
+            .song-artist {
+                font-weight: normal;
+                margin-right: 10px;
+            }
         }
     </style>
 
 <a class="home-button" href="/">Home</a>
-
+<a class="view-button" href="/view_playlist">View Playlist</a>
 </head>
 <body>
 <h1>Welcome to my Playlist Form</h1>
 <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?auto=format&fit=crop&q=60&w=1400&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNTMxNTY2fHxlbnwwfHx8fHw%3D" alt="No Music No Life" style="width: 400px; height: auto;">
 
     <form method="POST" action="/playlist">
-      {{ form.csrf_token }}
-      {{ form.song_title.label }}
-      {{ form.song_title(size=32) }}
-      {{form.artist.label}}
-      {{form.artist(size=32)}}
-      <input type="submit" value="Submit">
-    </form>
+    {{ form.csrf_token }}
+    <label class="song-title">{{ form.song_title.label }}</label>
+    {{ form.song_title(size=32) }}
+    <label class="song-artist">{{ form.artist.label }}</label>
+    {{ form.artist(size=32) }}
+    <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>

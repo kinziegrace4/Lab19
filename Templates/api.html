@@ -5,7 +5,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <!DOCTYPE html>
     <title>Song Search Results</title>
-</head>
    <style>
         body {
             background-color: lavender;
@@ -30,19 +29,53 @@
         .home-button:hover {
             background-color: green;
             }
+        .back-button {
+            display: inline-block;
+                padding: 5px 10px;
+                background-color: palevioletred;
+                color: white;
+                text-decoration: none;
+                border: 2px solid palevioletred;
+                border-radius: 5px;
+                font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: green;
+            }
+        .song-list {
+            list-style: none;
+            padding: 10px;
+        }
+        .song-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .song-name {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .song-artist {
+            color: black;
+        }
     </style>
 <head>
-<body>
 <a class="home-button" href="/">Home</a>
-</body>
+<a class="back-button" href="/api">Back to Search Tracks</a>
 
+<div>
+<body>
 <body>
 
     <h1>Song Search Results</h1>
-    <ul>
+    <ul class = "song-list">
         {% for song in song_results %}
-            <li>{{ song.name }} by {{ song.artist }}</li>
+            <li class="song-item">
+                <span class="song-name">{{song.name}}</span>
+                <span class="song-artist">by {{song.artist}}</span>
+            </li>
         {% endfor %}
     </ul>
 </body>
 </html>
+

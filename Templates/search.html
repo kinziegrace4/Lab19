@@ -13,6 +13,13 @@
             color: palevioletred;
             font-weight: bold;
         }
+        p {
+           font-family: "Times New Roman", sans-serif;
+           font-size: 16px;
+           color: black;
+           font-weight: bold;
+           font-style: italic;
+        }
         .home-button {
                 display: inline-block;
                 padding: 5px 10px;
@@ -31,10 +38,14 @@
 
 </head>
 <body>
-    <h1>Search for Tracks</h1>
     <a class="home-button" href="/">Home</a>
+
+    <h1>Search for Tracks</h1>
     <form method="POST" action="/api">
-        <label for="search_query">Enter a search query:</label>
+        <p>Welcome to Kinzie's last.fm API. </p>
+        <p>Enter an artists name or song title.</p>
+        <p>The result will return the song title and artist name.</p>
+        <label for="search_query">Enter a song title or artist:</label>
         <input type="text" name="search_query" id="search_query" required>
         <button type="submit">Search</button>
     </form>

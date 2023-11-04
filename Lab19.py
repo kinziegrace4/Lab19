@@ -9,6 +9,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'csumb-otter'
 bootstrap = Bootstrap(app)
 
+# https://www.dataquest.io/blog/last-fm-api-python/
+# https://www.last.fm/api/intro
 LASTFM_API_KEY = 'a3c735dfd7ec562a596c8a61b6d60254'
 USER_AGENT = 'Dataquest'
 endpoint = 'http://ws.audioscrobbler.com/2.0/'
@@ -19,11 +21,11 @@ headers = {
 
 payload = {
     'api_key': LASTFM_API_KEY,
-    'method': 'chart.gettopartists',
+    'method': 'chart.getTopArtists',
     'format': 'json'
 }
 
-# Note: The code below should be placed within a specific route function to execute it in response to a request.
+
 
 playlist = []
 
